@@ -1,0 +1,22 @@
+header,
+section
+{
+    padding: 30px 0;
+}
+
+.line {
+    width: 150px;
+    height: 3px;
+    margin: 20px auto;
+}
+
+.btn {
+    margin: 15px 0;
+}
+
+.ans-row {
+    margin: 5px 0;
+    padding: 15px 0;
+    vertical-align: middle;
+}
+
