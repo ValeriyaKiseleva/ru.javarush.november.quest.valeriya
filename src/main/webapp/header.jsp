@@ -20,28 +20,6 @@
     </div>
 </header>
 
-
-<%--<!-- Button trigger modal -->--%>
-<%--<button action="statistic" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#statistic">--%>
-<%--    Launch demo modal--%>
-<%--</button>--%>
-<%--<!-- Modal -->--%>
-<%--<div class="modal fade" id="statistic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">--%>
-<%--    <div class="modal-dialog">--%>
-<%--        <div class="modal-content">--%>
-<%--            <div class="modal-header">--%>
-<%--                <h2 class="modal-title fs-5" id="exampleModalLabel">Статистика</h2>--%>
-<%--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--%>
-<%--            </div>--%>
-<%--            <div class="modal-body">--%>
-<%--                <p class="fs-6">Имя : ${sessionScope.name}</p>--%>
-<%--                <p class="fs-6">Выиграно квестов : ${sessionScope.wonGames}</p>--%>
-<%--                <p class="fs-6">Проиграно квестов : ${sessionScope.lostGames}</p>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>

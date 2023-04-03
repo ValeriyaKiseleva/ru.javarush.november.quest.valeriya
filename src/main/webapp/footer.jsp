@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,8 +13,6 @@
     <div class="container ">
         <div class="row align-middle">
             <div class="col-12 align-middle">
-                <%--                <a href="" class="text-white" data-bs-toggle="modal" data-bs-target="#statistic">Статистика</a>--%>
-
                 <button action="statistic" type="button" class="btn btn-info" data-bs-toggle="modal"
                         data-bs-target="#statistic">
                     <p class="fs-4 text-white">Статистика</p>
@@ -23,12 +22,6 @@
         </div>
     </div>
 
-
-    <!-- Button trigger modal -->
-    <%--    <button action="statistic" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#statistic">--%>
-    <%--        Launch demo modal--%>
-    <%--    </button>--%>
-    <!-- Modal -->
     <div class="modal fade" id="statistic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -38,7 +31,7 @@
                 </div>
                 <div class="modal-body">
                     <p class="fs-6">
-                        Имя : ${sessionScope.name}
+                        Имя : ${sessionScope.userName}
                     </p>
                     <p class="fs-6">
                         Выиграно квестов :
@@ -62,9 +55,6 @@
                             </c:otherwise>
                         </c:choose>
                     </p>
-<%--                    <p class="fs-6">--%>
-<%--                        Проиграно квестов : ${sessionScope.lostGames}--%>
-<%--                    </p>--%>
                 </div>
             </div>
         </div>

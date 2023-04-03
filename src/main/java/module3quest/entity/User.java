@@ -11,14 +11,6 @@ public class User {
         this.wonGames = 0;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
     public int getLostGames() {
         return lostGames;
     }

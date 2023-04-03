@@ -1,5 +1,5 @@
 package module3quest.servlet;
-import module3quest.repository.*;
+
 import module3quest.service.QuestService;
 import module3quest.service.UserInit;
 
@@ -13,9 +13,9 @@ import javax.servlet.http.*;
 @WebServlet(name = "helloServlet", value = "/start")
 public class HelloServlet extends HttpServlet {
 
-
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
     }
 
     @Override
@@ -24,31 +24,12 @@ public class HelloServlet extends HttpServlet {
         String userName = request.getParameter("firstName");
 
         HttpSession session = request.getSession();
-        String sessionID = session.getId();
-
-        session.setAttribute("name", userName);
-
+        session.setAttribute("questId", "quest1");
         response.setContentType("text/html;charset=utf-8");
 
-        userInit(sessionID, userName);
-        questInit();
+        UserInit.addUser(session, userName);
 
         QuestService.startGame(request, response);
     }
-
-
-
-    private void userInit(String sessionId, String userName) throws ServletException {
-        UserInit.addUser(sessionId, userName);
-
-    }
-
-    private void questInit() {
-        new QuestionRepository().questQuestionInit();
-        new CompletionRepository().questCompletionInit();
-        new AnswerRepository().questAnswerInit();
-
-    }
-
 
 }

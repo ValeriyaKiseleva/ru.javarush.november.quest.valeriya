@@ -1,32 +1,31 @@
 package module3quest.repository;
 
-
 import module3quest.entity.Completion;
 
 import java.util.HashMap;
 
+
 public class CompletionRepository {
-    private static HashMap<String, Completion> questCompletions = new HashMap<>();
-    private static String gameIsWon = "ПОБЕДА !";
-    private static String gameIsLost = "ПОРАЖЕНИЕ !";
-
-    public void questCompletionInit() {
-        questCompletions.put("cmp1", new Completion(false, "Loss 1"));
-        questCompletions.put("cmp2", new Completion(false, "Loss 2"));
-        questCompletions.put("cmp3", new Completion(false, "Loss 3"));
-        questCompletions.put("cmp4", new Completion(true, "Win"));
-    }
-
-
-    public static Completion getCompletionById(String completionId) {
-        return questCompletions.get(completionId);
-    }
+    private HashMap<String, Completion> questCompletions = new HashMap<>();
+    private final static String GAME_IS_WON = "ПОБЕДА !";
+    private final static String GAME_IS_LOST = "ПОРАЖЕНИЕ !";
 
     public static String getTitleGameIsWon() {
-        return gameIsWon;
+        return GAME_IS_WON;
     }
 
     public static String getTitleGameIsLost() {
-        return gameIsLost;
+        return GAME_IS_LOST;
+    }
+
+    private static HashMap<String, Completion> completionsBD = new HashMap<>() {{
+        put("cmp1", new Completion(false, "Loss 1"));
+        put("cmp2", new Completion(false, "Loss 2"));
+        put("cmp3", new Completion(false, "Loss 3"));
+        put("cmp4", new Completion(true, "Win"));
+    }};
+
+    public static Completion getCompletionById(String completionId) {
+        return completionsBD.get(completionId);
     }
 }
