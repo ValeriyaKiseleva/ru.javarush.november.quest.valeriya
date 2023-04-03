@@ -26,6 +26,8 @@ public class HelloServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String sessionID = session.getId();
 
+        session.setAttribute("name", userName);
+
         response.setContentType("text/html;charset=utf-8");
 
         userInit(sessionID, userName);

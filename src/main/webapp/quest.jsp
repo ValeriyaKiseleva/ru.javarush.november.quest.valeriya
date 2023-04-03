@@ -26,7 +26,7 @@
       <div class="col-2"></div>
       <div class="col-8">
         <label name="question" class="form-label text-primary-emphasis">
-          <p class="fs-4"><c:out value="${questionText}"/></p>
+          <p class="fs-6"><c:out value="${questionText}"/></p>
         </label>
       </div>
       <div class="col-2"></div>
@@ -37,11 +37,11 @@
           <div class="row border border-info ans-row">
             <div class="col-2"></div>
             <div class="col-8 align-middle">
-              <input type="radio" class="form-check-input align-middle" value="${answer.key}"
+              <input type="radio" class="form-check-input border-info align-middle" value="${answer.key}"
                      name="answerOptions"
                      required>
-              <label class="form-check-label text-primary-emphasis align-middle">
-                <p class="fs-5 "><c:out value="${answer.value}"/></p>
+              <label class="form-check-label text-primary-emphasis align-middle" >
+                <p class="fs-6 "><c:out value="${answer.value}"/></p>
               </label>
             </div>
             <div class="col-2"></div>
@@ -63,7 +63,7 @@
   </div>
 </section>
 
-
+<jsp:include page="footer.jsp"></jsp:include>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>

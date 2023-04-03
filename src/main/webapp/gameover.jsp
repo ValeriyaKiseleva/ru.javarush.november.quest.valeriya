@@ -16,9 +16,9 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h3 class="text-center text-primary-emphasis">
+        <h4 class="text-center text-primary-emphasis">
           <c:out value="${completionTitle}"/>
-        </h3>
+        </h4>
         <div class="line bg-info"></div>
 
         <%--            <h1 class="text-center text-info">--%>
@@ -31,7 +31,7 @@
       <div class="col-2"></div>
       <div class="col-8 text-center" >
         <label name="question" class="form-label">
-          <p class="fs-4"><c:out value="${completionText}"/></p>
+          <p class="fs-6"><c:out value="${completionText}"/></p>
         </label>
       </div>
       <div class="col-2"></div>
@@ -46,7 +46,7 @@
   </div>
 </section>
 
-
+<jsp:include page="footer.jsp"></jsp:include>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>

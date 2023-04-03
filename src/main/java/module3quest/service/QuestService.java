@@ -52,9 +52,11 @@ public class QuestService {
         User user = UserInit.getUserById(request.getSession().getId());
         if (completion.getIsWin()) {
             user.gameIsWon();
+            request.getSession().setAttribute("wonGames", user.getWonGames());
             request.setAttribute("completionTitle", CompletionRepository.getTitleGameIsWon());
         } else {
             user.gameIsLost();
+            request.getSession().setAttribute("lostGames", user.getLostGames());
             request.setAttribute("completionTitle", CompletionRepository.getTitleGameIsLost());
         }
 
