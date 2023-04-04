@@ -23,14 +23,20 @@ public class HelloServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         String userName = request.getParameter("firstName");
 
-        HttpSession session = request.getSession();
-        session.setAttribute("questId", "quest1");
-        //request.setAttribute("questId", "quest1");
+        request.getSession().setAttribute("questId", "quest1");
+       //HttpSession session = request.getSession();
+
+        //session.setAttribute("questId", "quest1");
+
+        request.setAttribute("questId", "quest1");
         response.setContentType("text/html;charset=utf-8");
 
-        UserInit.addUser(session, userName);
+        UserInit.addUser(request.getSession(), userName);
 
         QuestService.startGame(request, response);
+
+        request.getRequestDispatcher("quest.jsp").forward(request, response);
+
     }
 
 }

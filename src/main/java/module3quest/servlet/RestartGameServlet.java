@@ -17,7 +17,11 @@ public class RestartGameServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setCharacterEncoding("UTF-8");
 
+        //request.getSession().setAttribute("questId", "quest1");
+
+        request.setAttribute("questId", request.getSession().getAttribute("questId"));
         QuestService.startGame(request, response);
+        request.getRequestDispatcher("quest.jsp").forward(request, response);
     }
 
     @Override

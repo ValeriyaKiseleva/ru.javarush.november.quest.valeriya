@@ -20,7 +20,7 @@
             <div class="col-2"></div>
             <div class="col-8">
                 <label name="question" class="form-label text-primary-emphasis">
-                    <p class="fs-6"><c:out value="${questionText}"/></p>
+                    <p class="fs-5"><c:out value="${questionText}"/></p>
                 </label>
             </div>
             <div class="col-2"></div>
@@ -35,7 +35,7 @@
                                    name="answerOptions"
                                    required>
                             <label class="form-check-label text-primary-emphasis align-middle">
-                                <p class="fs-6 "><c:out value="${answer.value}"/></p>
+                                <p class="fs-5 "><c:out value="${answer.value}"/></p>
                             </label>
                         </div>
                         <div class="col-2"></div>

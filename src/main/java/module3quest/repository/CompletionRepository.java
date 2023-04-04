@@ -19,10 +19,10 @@ public class CompletionRepository {
     }
 
     private static HashMap<String, Completion> completionsBD = new HashMap<>() {{
-        put("cmp1", new Completion(false, "Loss 1"));
-        put("cmp2", new Completion(false, "Loss 2"));
-        put("cmp3", new Completion(false, "Loss 3"));
-        put("cmp4", new Completion(true, "Win"));
+        put("cmp1", new Completion(false, "Ты отклонил вызов."));
+        put("cmp2", new Completion(false, "Ты не пошел на переговоры."));
+        put("cmp3", new Completion(false, "Твою ложь разоблачили."));
+        put("cmp4", new Completion(true, "Тебя вернули домой!"));
     }};
 
     public static Completion getCompletionById(String completionId) {

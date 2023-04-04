@@ -22,12 +22,17 @@
                 <div class="line bg-info"></div>
             </div>
 
-            <div class="col-12">
-                <p>
-                    qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                    qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                    qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq</p>
+            <div class="col-2"></div>
+            <div class="col-8">
+                <p class="fs-6">
+                    Ты стоишь в космическом порту и готов подняться на борт своего корабля. Разве ты не об этом
+                    мечтал? Стать капитаном галактического судна с экипажем, который будет совершать подвиги
+                    под твоим командованием.
+                    <br/>
+                    Так что вперед!
+                </p>
             </div>
+            <div class="col-2"></div>
         </div>
 
         <div class="row">
@@ -36,12 +41,19 @@
                 <div class="line bg-info"></div>
             </div>
 
-            <div class="col-12">
-                <p>
-                    qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                    qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                    qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq</p>
+            <div class="col-2"></div>
+            <div class="col-8">
+                <p class="fs-6">
+                    Когда ты поднялся на борт корабля, тебя поприветствовала девушка с черной папкой в руках:
+                    <br>
+                    - Здравствуйте, командир! Я Зинаида - ваша помощница. Видите? Там в углу пьет кофе наш
+                    штурман - сержант Перегарный шлейф, под штурвалом спит наш бортпроводник - Черный Богдан,
+                    а фотографирует его Сергей Стальная Пятка - наш навигатор.
+                    <br>
+                    А как обращаться к вам?
+                </p>
             </div>
+            <div class="col-2"></div>
         </div>
     </div>
 </section>

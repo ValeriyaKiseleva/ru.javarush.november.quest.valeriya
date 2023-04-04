@@ -27,7 +27,7 @@
             <div class="col-2"></div>
             <div class="col-8 text-center">
                 <label name="question" class="form-label">
-                    <p class="fs-6"><c:out value="${completionText}"/></p>
+                    <p class="fs-5"><c:out value="${completionText}"/></p>
                 </label>
             </div>
             <div class="col-2"></div>

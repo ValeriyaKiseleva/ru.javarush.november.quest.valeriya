@@ -23,13 +23,14 @@ public class GameServlet extends HttpServlet {
         QuestService.defineNextStep(request, response);
     }
 
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=utf-8");
 
-        HttpSession session = request.getSession();
-        String sessionID = session.getId();
+        //HttpSession session = request.getSession();
+        //String sessionID = session.getId();
 
         request.getRequestDispatcher("quest.jsp").forward(request, response);
 

@@ -10,41 +10,33 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
 
+
 public class QuestService {
 
-    public static void startGame(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String questId = (String) request.getSession().getAttribute("questId");
-        //String questId = (String)request.getAttribute("questId");
+    public static HttpServletRequest startGame(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String questId = (String)request.getAttribute("questId");
         Quest quest = QuestRepository.getQuestById(questId);
 
         Question firstQuestion = quest.getFirstQuestion();
         getOutputValues(request, firstQuestion);
-        request.getRequestDispatcher("quest.jsp").forward(request, response);
+        return request;
     }
 
     private static HttpServletRequest getOutputValues(HttpServletRequest request, Question question) {
-        String questId = (String) request.getSession().getAttribute("questId");
-        //String questId = (String)request.getAttribute("questId");
-        Quest quest = QuestRepository.getQuestById(questId);
-
         request.setAttribute("questionText", question.getText());
         HashSet<String> currentAnswerOptionsId = question.getNextAnswersId();
         HashMap<String, String> currentAnswersText = new HashMap<>();
         for (String answerId : currentAnswerOptionsId) {
-            currentAnswersText.put(answerId, quest.getAnswerById(answerId).getText());
+            currentAnswersText.put(answerId, AnswerRepository.getAnswerById(answerId).getText());
         }
         request.setAttribute("answersTextMap", currentAnswersText);
         return request;
     }
 
     public static void defineNextStep(HttpServletRequest request, HttpServletResponse response)
-                                           throws ServletException, IOException {
+            throws ServletException, IOException {
 
-        String questId = (String) request.getSession().getAttribute("questId");
-        //String questId = (String)request.getAttribute("questId");
-        Quest quest = QuestRepository.getQuestById(questId);
-
-        Answer currentAnswer = quest.getAnswerById((String) request.getAttribute("currentAnswer"));
+        Answer currentAnswer = AnswerRepository.getAnswerById((String) request.getAttribute("currentAnswer"));
 
         if (currentAnswer.getResult() instanceof Question) {
             getOutputValues(request, (Question) currentAnswer.getResult());
@@ -54,7 +46,7 @@ public class QuestService {
         }
     }
 
-    public static void finishGame(HttpServletRequest request, HttpServletResponse response, Completion completion) throws ServletException, IOException {
+    private static void finishGame(HttpServletRequest request, HttpServletResponse response, Completion completion) throws ServletException, IOException {
         User user = UserRepository.getUserById((Integer) request.getSession().getAttribute("userId"));
         if (completion.getIsWin()) {
             user.gameIsWon();
