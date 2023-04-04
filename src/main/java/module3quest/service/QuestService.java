@@ -14,15 +14,17 @@ public class QuestService {
 
     public static void startGame(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String questId = (String) request.getSession().getAttribute("questId");
+        //String questId = (String)request.getAttribute("questId");
         Quest quest = QuestRepository.getQuestById(questId);
 
         Question firstQuestion = quest.getFirstQuestion();
-        request = getOutputValues(request, firstQuestion);
+        getOutputValues(request, firstQuestion);
         request.getRequestDispatcher("quest.jsp").forward(request, response);
     }
 
     private static HttpServletRequest getOutputValues(HttpServletRequest request, Question question) {
         String questId = (String) request.getSession().getAttribute("questId");
+        //String questId = (String)request.getAttribute("questId");
         Quest quest = QuestRepository.getQuestById(questId);
 
         request.setAttribute("questionText", question.getText());
@@ -39,12 +41,13 @@ public class QuestService {
                                            throws ServletException, IOException {
 
         String questId = (String) request.getSession().getAttribute("questId");
+        //String questId = (String)request.getAttribute("questId");
         Quest quest = QuestRepository.getQuestById(questId);
 
         Answer currentAnswer = quest.getAnswerById((String) request.getAttribute("currentAnswer"));
 
         if (currentAnswer.getResult() instanceof Question) {
-            request = getOutputValues(request, (Question) currentAnswer.getResult());
+            getOutputValues(request, (Question) currentAnswer.getResult());
             request.getRequestDispatcher("quest.jsp").forward(request, response);
         } else if (currentAnswer.getResult() instanceof Completion) {
             finishGame(request, response, (Completion) currentAnswer.getResult());

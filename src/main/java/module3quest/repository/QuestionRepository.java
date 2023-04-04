@@ -14,7 +14,7 @@ public class QuestionRepository {
             put("qs3", new Question("Вопрос №3", new HashSet<String>(Arrays.asList("ans5", "ans6"))));
     }};
 
-    public static Question getQuestionById(String questionId) {
+    public static Question getQuestionById(String questionId) throws NullPointerException {
         return questionsBD.get(questionId);
     }
 }

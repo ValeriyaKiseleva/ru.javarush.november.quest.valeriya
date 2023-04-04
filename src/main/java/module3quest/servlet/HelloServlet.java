@@ -25,6 +25,7 @@ public class HelloServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         session.setAttribute("questId", "quest1");
+        //request.setAttribute("questId", "quest1");
         response.setContentType("text/html;charset=utf-8");
 
         UserInit.addUser(session, userName);
